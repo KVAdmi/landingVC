@@ -12,13 +12,20 @@
     Content-Type = "application/json; charset=utf-8"
     Cache-Control = "max-age=300"
 
+# Excepción específica para .well-known (CRÍTICO: debe ir ANTES del /* catch-all)
+[[redirects]]
+  from = "/.well-known/*"
+  to = "/.well-known/:splat"
+  status = 200
+  force = false
+
 # Excepción específica para la página de eliminación de cuenta
 [[redirects]]
   from = "/account-deletion"
   to = "/account-deletion.html"
   status = 200
 
-# Single Page App routing: serve index.html for all non-file paths
+# Single Page App routing: serve index.html for all non-file paths (DEBE SER EL ÚLTIMO)
 [[redirects]]
   from = "/*"
   to = "/index.html"

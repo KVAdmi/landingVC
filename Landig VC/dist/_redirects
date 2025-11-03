@@ -1,4 +1,8 @@
+# Excepción específica para .well-known (CRÍTICO: debe ir ANTES del /* catch-all)
+/.well-known/*   /.well-known/:splat   200
+
 # Asegurar ruta directa para la página de eliminación de cuenta (requisito de Google Play)
 /account-deletion   /account-deletion.html   200
 
+# Single Page App routing: serve index.html for all non-file paths (DEBE SER EL ÚLTIMO)
 /*    /index.html   200
