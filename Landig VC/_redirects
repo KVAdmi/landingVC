@@ -1,0 +1,2 @@
+# Evita que Netlify redirija .well-known a index.html
+/.well-known/*  /index.html  200!
