@@ -17,6 +17,13 @@
    to = "/index.html"
    status = 200
 
+# Headers para assetlinks.json
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Cache-Control = "max-age=300"
+
 # Redirect legacy favicon paths to the new site icon
 [[redirects]]
   from = "/favicon.ico"
