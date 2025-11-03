@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eliminar mi cuenta y datos | VitaCard 365</title>
+  <meta name="description" content="Solicita la eliminación de tu cuenta y datos personales de VitaCard 365 (Azisted, SA de CV)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0d2041;--accent:#f26542;--muted:#cbd5e1;--card:rgba(255,255,255,.06);--card-border:rgba(255,255,255,.1)}
+    *{box-sizing:border-box}
+  body{font-family:'Questrial',sans-serif;background:var(--bg);color:#fff;margin:0}
+  header.brand{background:var(--bg);border-bottom:1px solid var(--card-border)}
+  .brand-wrap{max-width:980px;margin:0 auto;padding:24px 20px;text-align:center}
+  .brand-wrap img{height:180px;width:auto;max-width:100%}
+  @media(min-width:960px){.brand-wrap img{height:260px}}
+    main{max-width:980px;margin:0 auto;padding:40px 20px;line-height:1.7}
+    a{color:var(--accent)}
+    h1,h2{color:var(--accent);margin-top:1.2em}
+    .muted{opacity:.85}
+    .card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:24px}
+    ul{padding-left:18px}
+    footer{max-width:980px;margin:0 auto;padding:20px;color:var(--muted);opacity:.9}
+    /* Form */
+    form{display:grid;gap:16px;margin-top:8px}
+    label{display:block;font-size:.95rem;color:#e2e8f0;margin-bottom:6px}
+    input[type="text"],input[type="email"],textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--card-border);background:rgba(255,255,255,.04);color:#fff;outline:none}
+    textarea{min-height:120px;resize:vertical}
+    .row{display:grid;gap:16px;grid-template-columns:1fr}
+    @media(min-width:720px){.row{grid-template-columns:1fr 1fr}}
+    .hint{font-size:.85rem;color:#94a3b8}
+    .checkbox{display:flex;align-items:flex-start;gap:10px}
+    .btn{appearance:none;border:0;border-radius:999px;padding:12px 18px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;transition:transform .12s ease,filter .12s ease}
+    .btn:active{transform:translateY(1px)}
+    .btn[disabled]{opacity:.7;cursor:not-allowed;filter:saturate(.5)}
+    .note{font-size:.9rem;color:#cbd5e1;opacity:.9}
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal{background:#102652;border:1px solid var(--card-border);border-radius:16px;max-width:520px;width:100%;padding:24px;box-shadow:0 10px 40px rgba(0,0,0,.45)}
+    .modal h3{margin-top:0;color:#fff}
+    .modal p{color:#e2e8f0}
+    .modal .actions{display:flex;justify-content:flex-end;margin-top:16px}
+  </style>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+  <header class="brand">
+    <div class="brand-wrap">
+      <img src="https://horizons-cdn.hostinger.com/d4d71dd9-e729-4342-bb05-298ddd11d3ce/f3536275e8f57b492ae6fbbb9c6db9e6.png" alt="VitaCard 365 Logo" />
+    </div>
+  </header>
+  <main>
+    <h1>Solicitud de eliminación de cuenta y datos</h1>
+    <p class="muted">Última actualización: 15 de octubre de 2025</p>
+
+    <div class="card">
+      <p>
+        Completa el siguiente formulario para solicitar la eliminación de tu cuenta y de tus datos personales asociados a VitaCard 365. Nuestro equipo validará la titularidad y te contactará al correo proporcionado para confirmar la eliminación de datos, conforme a la normativa aplicable.
+      </p>
+
+      <form id="accountDeletionForm" name="Account Deletion" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <!-- Netlify Forms: asegúrate de configurar notificaciones por correo a contacto@vitacard365.com en el dashboard de Netlify -->
+        <input type="hidden" name="form-name" value="Account Deletion">
+        <p style="display:none">
+          <label>Si eres humano deja este campo vacío: <input name="bot-field"></label>
+        </p>
+
+        <div class="row">
+          <div>
+            <label for="fullName">Nombre completo</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Tu nombre y apellidos" required>
+          </div>
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="phone">Teléfono (opcional)</label>
+            <input id="phone" name="phone" type="text" placeholder="Incluye lada si aplica">
+            <div class="hint">Se usará únicamente para facilitar la verificación, si es necesario.</div>
+          </div>
+          <div>
+            <label for="accountId">ID de cuenta (opcional)</label>
+            <input id="accountId" name="accountId" type="text" placeholder="Si cuentas con un identificador de cliente">
+          </div>
+        </div>
+
+        <div>
+          <label for="reason">Motivo de la solicitud</label>
+          <textarea id="reason" name="reason" placeholder="Describe brevemente tu solicitud" required></textarea>
+        </div>
+
+        <div class="checkbox">
+          <input id="confirmOwnership" name="confirmOwnership" type="checkbox" value="true" required style="margin-top:4px">
+          <label for="confirmOwnership">Confirmo que soy el titular de la cuenta y entiendo que la eliminación puede ser irreversible de acuerdo con los términos aplicables.</label>
+        </div>
+
+        <button class="btn" id="submitBtn" type="submit">Enviar solicitud</button>
+        <div class="note">Al enviar este formulario, aceptas que nos pongamos en contacto contigo por correo para confirmar la eliminación de datos.</div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <a href="/">← Volver al inicio</a>
+  </footer>
+
+  <!-- Modal de confirmación -->
+  <div id="successModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+    <div class="modal">
+      <h3 id="successTitle">Solicitud enviada</h3>
+      <p>
+        Gracias. Hemos recibido tu solicitud. Nos pondremos en contacto contigo por correo electrónico para confirmar la eliminación de tu cuenta y datos.
+      </p>
+      <div class="actions">
+        <button class="btn" onclick="closeModal()">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Utilidad para serializar a application/x-www-form-urlencoded
+    function encode(data){
+      return Object.keys(data).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
+    }
+
+    const form = document.getElementById('accountDeletionForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const modal = document.getElementById('successModal');
+
+    function openModal(){ modal.style.display = 'flex'; }
+    function closeModal(){ modal.style.display = 'none'; }
+    window.closeModal = closeModal;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      try {
+        const formData = new FormData(form);
+        const payload = { 'form-name': form.getAttribute('name') };
+        for (const [k, v] of formData.entries()) payload[k] = v;
+
+        // Envío a Netlify Forms
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode(payload)
+        });
+
+        if (!res.ok) throw new Error('No se pudo enviar el formulario');
+
+        form.reset();
+        openModal();
+      } catch (err) {
+        alert('Hubo un problema al enviar tu solicitud. Intenta nuevamente o escribe a contacto@vitacard365.com');
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Bloquear atajos de copia/impresión como en otras páginas
+    document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'x' || e.key === 's')) {
+        e.preventDefault();
+      }
+      if (e.key === 'PrintScreen') {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

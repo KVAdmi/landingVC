@@ -1,0 +1,7 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="40" rx="8" fill="#0d2041"/>
+  <g>
+    <circle cx="24" cy="20" r="14" fill="#f26542"/>
+    <text x="48" y="26" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#ffffff">VitaCard 365</text>
+  </g>
+</svg>

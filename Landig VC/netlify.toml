@@ -1,0 +1,29 @@
+ [build]
+   command = "npm run build"
+   publish = "dist"
+
+ [build.environment]
+   NODE_VERSION = "20"
+
+ # Single Page App routing: serve index.html for all non-file paths
+ # Excepción específica para la página de eliminación de cuenta
+ [[redirects]]
+   from = "/account-deletion"
+   to = "/account-deletion.html"
+   status = 200
+
+ [[redirects]]
+   from = "/*"
+   to = "/index.html"
+   status = 200
+
+# Redirect legacy favicon paths to the new site icon
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/icon.png"
+  status = 301
+
+[[redirects]]
+  from = "/favicon.png"
+  to = "/icon.png"
+  status = 301
