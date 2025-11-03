@@ -1,3 +1,3 @@
 /.well-known/*   /.well-known/:splat   200
 /account-deletion   /account-deletion.html   200
-/*               /index.html            200
+/*   /index.html   200
