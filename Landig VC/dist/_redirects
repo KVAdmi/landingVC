@@ -1,3 +1,7 @@
-/*    /index.html   200
+# Excepción específica para .well-known (DEBE IR ANTES que la regla general)
+/.well-known/*  /.well-known/:splat  200!
+
 # Asegurar ruta directa para la página de eliminación de cuenta (requisito de Google Play)
 /account-deletion   /account-deletion.html   200
+
+/*    /index.html   200

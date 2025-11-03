@@ -6,6 +6,13 @@
    NODE_VERSION = "20"
 
  # Single Page App routing: serve index.html for all non-file paths
+ # Excepción específica para .well-known (DEBE IR ANTES que la regla general)
+ [[redirects]]
+   from = "/.well-known/*"
+   to = "/.well-known/:splat"
+   status = 200
+   force = true
+
  # Excepción específica para la página de eliminación de cuenta
  [[redirects]]
    from = "/account-deletion"
